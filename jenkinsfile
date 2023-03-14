@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('connection') {
             steps {
-                sh '''Echo "Build Step with shell command" '''
+                sh '''echo"Build Step with shell command" '''
             }
         }
         stage('Build Step') {
