@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('connection') {
             steps {
-                echo "Build Step with shell command"
+                ech"Build Step with shell command"
             }
         }
         stage('Build Step') {
@@ -21,6 +21,9 @@ pipeline {
     post {
     always {
     echo "Jobs completed susscefully, this messagw is from post section"
+    }
+    failure {
+    echo"One of the job got failed kindly check"
     }
    }
 }
