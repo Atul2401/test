@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('connection') {
+            steps {
+                git credentialsId: 'GitHubCred', url: 'https://github.com/Atul2401/test.git'
+            }
+        }
+        stage('Build Step') {
+            steps {
+                sh '''cat index.html
+                echo "Hello there , You are inside 2nd job"
+                echo "NOw we willPrint pyhton file "
+                cat abc.py 
+                ls -al 
+                '''
+            }
+        }
+    }
+}
