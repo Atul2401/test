@@ -18,4 +18,7 @@ pipeline {
             }
         }
     }
+    post {
+    always {
+    echo "Jobs completed susscefully, this messagw is from post section"
 }
