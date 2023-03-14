@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('connection') {
             steps {
-                git credentialsId: 'GitHubCred', url: 'https://github.com/Atul2401/test.git'
+                sh '''Echo "Build Step with shell command"'''
             }
         }
         stage('Build Step') {
